@@ -1,0 +1,124 @@
+.table {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table:hover {
+    transform: scale(1.05);
+  }
+  
+  .table:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Формы столов */
+  .table-square {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+  }
+  
+  .table-round {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  .table-rectangle {
+    width: 100px;
+    height: 60px;
+    border-radius: 4px;
+  }
+  
+  /* Статусы */
+  .status-available {
+    background-color: #e8f5e9; /* Светло-зеленый */
+    color: #2e7d32;
+  }
+  
+  .status-occupied {
+    background-color: #ffebee; /* Светло-красный */
+    color: #c62828;
+  }
+  
+  .status-reserved {
+    background-color: #fff8e1; /* Светло-желтый */
+    color: #f57f17;
+  }
+  
+  .status-pending {
+    background-color: #e3f2fd; /* Светло-синий */
+    color: #1565c0;
+  }
+  
+  .selected {
+    box-shadow: 0 0 0 2px #45a049;
+    transform: scale(1.05);
+  }
+  
+  .tableInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    z-index: 1;
+  }
+  
+  .tableId {
+    font-weight: bold;
+  }
+  
+  .tableCapacity {
+    font-size: 0.8rem;
+  }
+  
+  /* Стили для тултипа */
+  .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .tooltipContent {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .tooltipContent h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .tooltipContent p {
+    margin: 4px 0;
+    color: #555;
+  }
